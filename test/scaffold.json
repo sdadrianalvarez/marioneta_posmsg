@@ -1,0 +1,83 @@
+﻿{
+	"templateName": "4database",
+	"dest": "odoo/addons2",
+	"name": "marioneta_posmsg",
+	"db_prefix": "sele",
+	"id": 718,
+	"summary": "Coloca mensajes para los puntos de venta",
+	"description": "Coloca mensajes para los puntos de venta",
+	"author": "caballeroantonio",
+	"website": "http://caballeroantonio.ddns.net",
+	"latest_version": "1.0",
+	"shortdesc": "POS messages",
+	"auto_install": false,
+	"application": true,
+	"license": "LGPL-3",
+	"maintainer": "caballeroantonio",
+	"category": "Tests",
+	"ir_model": {
+		"pos.config": {
+			"m_name": "Point of Sale Configuration",
+			"m_model": "pos.config",
+			"v_model": "",
+			"m_transient": false,
+			"d_name": "pos.config",
+			"_inherit": true,
+			"studio": false,
+			"fields": [
+				{
+					"id": 7084,
+					"d_name": "pos.config",
+					"name": "message",
+					"model": "pos.config",
+					"ttype": "char",
+					"relation": "",
+					"relation_field": "",
+					"selection": "[(\"\", null)]",
+					"field_description": "Message",
+					"help": null,
+					"invisible": 0,
+					"readonly": false,
+					"required": false,
+					"index": false,
+					"_default": null,
+					"states": 0,
+					"groups_": 0,
+					"company_dependent": 0,
+					"copied": true,
+					"store": true,
+					"group_operator": 0,
+					"aggregate_": 0,
+					"group_expand": null,
+					"depends": "''",
+					"compute": "\n\t\t",
+					"m_name": "Point of Sale Configuration",
+					"m_model": "pos.config",
+					"m_transient": false
+				}
+			]
+		}
+	},
+	"ir_ui_view": {
+		"odoo_studio_pos_conf_3653fb3a-92ad-49d7-9ac1-d1bce6da439a": {
+			"id": 1150,
+			"d_name": "odoo_studio_pos_conf_3653fb3a-92ad-49d7-9ac1-d1bce6da439a",
+			"d_module": "marioneta_posmsg",
+			"d_model": "ir.ui.view",
+			"v_name": "Odoo Studio: pos.config.tree.view customization",
+			"v_model": "pos.config",
+			"v_type": "tree",
+			"v_arch_db": "<data>\n  <xpath expr=\"//tree[1]/field[@name='name']\" position=\"after\">\n    <field name=\"message\" string=\"Message\"/>\n  </xpath>\n</data>\n",
+			"i_name": "view_pos_config_tree",
+			"i_module": "point_of_sale"
+		}
+	},
+	"mail_template": {},
+	"ir_ui_menu": {},
+	"ir_act_window": {},
+	"ir_act_server": {},
+	"ir_cron": {},
+	"ir_model_constraint": {},
+	"ir_model_access": {},
+	"studio_models": []
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+	
+		
+		
+	<record id="odoo_studio_pos_conf_3653fb3a-92ad-49d7-9ac1-d1bce6da439a" model="ir.ui.view">
+		<field name="name">Odoo Studio: pos.config.tree.view customization</field>
+		<field name="model">pos.config</field>
+		
+		<field name="inherit_id" ref="point_of_sale.view_pos_config_tree"/>
+		
+		<field name="arch" type="xml">
+<data>
+  <xpath expr="//tree[1]/field[@name='name']" position="after">
+    <field name="message" string="Message"/>
+  </xpath>
+</data>
+
+		</field>
+	</record>
+		
+	
+
+	
+
+
+	
+
+	
+
+	</data>
+	
+	<data noupdate="1">
+		
+	</data>
+</odoo>
