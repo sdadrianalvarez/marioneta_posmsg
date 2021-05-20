@@ -2,21 +2,45 @@
 	<data>
 
 		<template id="listing">
-			<ol>
-			<li t-foreach="objects" t-as="object">
-				<a t-attf-href="#{ root }/objects/#{ object.id }">
-					<t t-esc="object.display_name"/> - <t t-esc="object.message"/>
-				</a>
-			</li>
-			</ol>
+			<meta http-equiv="refresh" content="5; url=/pos/messages/objects" />
+			   
+			<table style="width:100%">
+				<tr>
+					<th>id</th>
+					<th>name</th>
+					<th>message</th>
+				</tr>
+				<tr t-foreach="objects" t-as="object">
+					<td>
+						<t t-esc="object.id"/>
+					</td>
+					<td>
+						<t t-esc="object.name"/>
+					</td>
+					<td>
+						<t t-esc="object.message"/>
+					</td>
+					<td>
+						<a t-attf-href="#{ root }/objects/#{ object.id }">
+							view
+						</a>
+					</td>
+				</tr>
+			</table> 
 		</template>
 		<template id="object">
-			<h1><t t-esc="object.display_name"/></h1>
+			<h1>
+				<t t-esc="object.display_name"/>
+			</h1>
 			<dl>
-			<t t-foreach="object._fields" t-as="field">
-				<dt><t t-esc="field"/></dt>
-				<dd><t t-esc="object[field]"/></dd>
-			</t>
+				<t t-foreach="object._fields" t-as="field">
+					<dt>
+						<t t-esc="field"/>
+					</dt>
+					<dd>
+						<t t-esc="object[field]"/>
+					</dd>
+				</t>
 			</dl>
 		</template>
 

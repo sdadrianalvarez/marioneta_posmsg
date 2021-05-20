@@ -1,4 +1,7 @@
 se tiene el repositorio https://github.com/sdadrianalvarez/marioneta_posmsg
+git clone https://github.com/sdadrianalvarez/marioneta_posmsg.git
+
+
 
 tengo instancias de odoo en http://caballeroantonio.ddns.net
 
